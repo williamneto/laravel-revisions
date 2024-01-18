@@ -7,7 +7,7 @@ use App\Models\Veicle;
 
 class VeiclesManager extends Component
 {
-    public $brand, $peopleId;
+    public $brand, $peopleId, $veicleId;
 
     public function render()
     {
@@ -46,7 +46,7 @@ class VeiclesManager extends Component
         $veicle = Veicle::find($this->veicleId);
         $veicle->update(
             [
-                'brand' => $this->name
+                'brand' => $this->brand
             ]
         );
 

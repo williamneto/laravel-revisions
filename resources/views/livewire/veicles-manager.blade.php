@@ -11,7 +11,7 @@
         placeholder="Owner"
     >
 
-    @if($peopleId)
+    @if($veicleId)
         <button wire:click="update">Update</button>
     @else
         <button wire:click="create">Create</button>

@@ -14,6 +14,9 @@
     <div class="container mx-auto p-4">
         <livewire:veicles-manager />
     </div>
+    <div class="container mx-auto p-4">
+        <livewire:revisions-manager />
+    </div>
     @vite(['resources/js/app.js'])
     @livewireScripts
 </body>
