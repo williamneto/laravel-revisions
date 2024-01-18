@@ -19,3 +19,7 @@
 ```
 ./vendor/bin/sail artisan make:livewire PeopleManager
 ```
+- Build front assets
+```
+./vendor/bin/sail npm run build
+```

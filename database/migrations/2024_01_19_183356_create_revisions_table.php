@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('revisions', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
-            $table->foreign('id')
+            $table->integer('veicleId')->unsigned()->after('id');
+            $table->foreign('veicleId')
                 ->references('id')
-                ->on('veicles');
+                ->on('veicles')
+                ->onDelete('CASCADE');
+            $table->date('date');
             $table->timestamps();
         });
     }

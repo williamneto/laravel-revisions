@@ -1,4 +1,5 @@
 <div>
+    <h2>New people</h2>
     <input
         wire:model="name"
         type="text"
@@ -21,11 +22,11 @@
         <button wire:click="create">Create</button>
     @endif
 
-    
+    <h2>People</h2>
     <ul>
         @foreach($peoples as $pep)
             <li>
-                {{ $pep->name }} - {{ $pep->gender}}/{{ $pep->age }}
+                {{ $pep->id }} | {{ $pep->name }} - {{ $pep->gender}}/{{ $pep->age }}
                 <div>
                     <button wire:click="edit({{ $pep->id }})">Edit</button>
                     <button wire:click="delete({{ $pep->id }})">Delete</button>

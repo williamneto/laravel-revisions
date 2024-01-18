@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('veicles', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id')
+            $table->integer('peopleId')->unsigned()->after('id');
+            $table->foreign('peopleId')
                 ->references('id')
                 ->on('people')
-                ->onDelete('cascade');
+                ->onDelete('CASCADE');
             $table->string('brand');
             $table->timestamps();
         });
